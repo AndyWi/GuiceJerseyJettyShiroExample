@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>eg</groupId>
+	<artifactId>guice-jetty-jersey-shiro</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>guice-jetty-jersey-shiro</name>
+
+	<repositories>
+		<repository>
+			<id>maven2-repository.java.net</id>
+    		<name>Java.net Repository for Maven</name>
+    		<url>http://download.java.net/maven/2/</url>
+    		<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Versions -->
+		<apache.commons.version>3.1</apache.commons.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+		<guice.version>3.0</guice.version>
+		<jersey.version>1.16</jersey.version>
+		<jsp-2.1-glassfish.version>2.1.v20100127</jsp-2.1-glassfish.version>
+		<junit.version>4.10</junit.version>
+		<shiro.version>1.2.1</shiro.version>
+
+		<!-- Use this Jetty for JDK 1.6: -->
+		<!-- <jetty.version>8.1.7.v20120910</jetty.version> --> 
+		
+		<!-- Use this Jetty for JDK 1.7: -->
+		<jetty.version>9.0.0.M4</jetty.version>
+	</properties>
+
+	<dependencies>
+	
+        <!-- Jetty -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+		
+		<dependency>
+		    <groupId>org.mortbay.jetty</groupId>
+		    <artifactId>jsp-2.1-glassfish</artifactId>
+		    <version>${jsp-2.1-glassfish.version}</version>
+		</dependency>
+
+        <!-- Guice -->
+        <dependency>
+	    	<groupId>com.google.inject</groupId>
+	    	<artifactId>guice</artifactId>
+	    	<version>${guice.version}</version>
+		</dependency>
+
+        <!-- Jersey -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-guice</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+
+		<!--  Shiro -->
+		<dependency>
+		    <groupId>org.apache.shiro</groupId>
+		    <artifactId>shiro-core</artifactId>
+		    <version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+	  	    <groupId>org.apache.shiro</groupId>
+		    <artifactId>shiro-guice</artifactId>
+		    <version>${shiro.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.shiro</groupId>
+		    <artifactId>shiro-web</artifactId>
+		    <version>${shiro.version}</version>
+		</dependency>
+
+		<!-- Commons -->
+        <dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+            
+        <!-- jUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+	</dependencies>
+</project>
