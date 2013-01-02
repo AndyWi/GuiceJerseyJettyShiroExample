@@ -25,7 +25,7 @@ public class Bootstrap {
 		// **** Shiro needs login.jsp to go through the GuiceFilter,
 		// but Jetty can't find the jsp when this happens. Commenting
 		// out this line lets Jetty find the jsp, but Shiro can't see it:
-		//webAppContext.addFilter(GuiceFilter.class, "/login.jsp", null);
+		webAppContext.addFilter(GuiceFilter.class, "/login.jsp", null);
 
 		//webAppContext.addServlet(DefaultServlet.class, "/");
 
