@@ -20,14 +20,14 @@ public class Bootstrap {
 
 		webAppContext.addEventListener(new EgGuiceServletContextListener());
 
-		webAppContext.addFilter(GuiceFilter.class, "/api/*", null);
+		webAppContext.addFilter(GuiceFilter.class, "/*", null);
 
 		// **** Shiro needs login.jsp to go through the GuiceFilter,
 		// but Jetty can't find the jsp when this happens. Commenting
 		// out this line lets Jetty find the jsp, but Shiro can't see it:
 		//webAppContext.addFilter(GuiceFilter.class, "/login.jsp", null);
 
-		webAppContext.addServlet(DefaultServlet.class, "/");
+		//webAppContext.addServlet(DefaultServlet.class, "/");
 
 		server.setHandler(webAppContext);
 
