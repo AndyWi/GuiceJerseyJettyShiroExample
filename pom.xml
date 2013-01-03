@@ -31,10 +31,10 @@
 		<shiro.version>1.2.1</shiro.version>
 
 		<!-- Use this Jetty for JDK 1.6: -->
-		 <jetty.version>8.1.7.v20120910</jetty.version>
+		<!-- <jetty.version>8.1.7.v20121106</jetty.version> --> 
 		
 		<!-- Use this Jetty for JDK 1.7: -->
-		<!--<jetty.version>9.0.0.M4</jetty.version>-->
+		<jetty.version>9.0.0.M4</jetty.version>
 	</properties>
 
 	<dependencies>
@@ -51,6 +51,7 @@
             <artifactId>jetty-webapp</artifactId>
             <version>${jetty.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-jsp</artifactId>
@@ -123,6 +124,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -133,7 +135,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.12</version>
         </dependency>
-
 
     </dependencies>
 </project>
